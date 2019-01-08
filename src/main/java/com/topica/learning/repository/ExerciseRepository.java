@@ -1,0 +1,19 @@
+package com.topica.learning.repository;
+
+import com.topica.learning.domain.Exercise;
+import org.springframework.data.jpa.repository.*;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+/**
+ * Spring Data  repository for the Exercise entity.
+ */
+@SuppressWarnings("unused")
+@Repository
+public interface ExerciseRepository extends JpaRepository<Exercise, Long>, JpaSpecificationExecutor<Exercise> {
+
+    @Query("select exercise from Exercise exercise where exercise.exerciseuser.login = ?#{principal.username}")
+    List<Exercise> findByExerciseuserIsCurrentUser();
+
+}

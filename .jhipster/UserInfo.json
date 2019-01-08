@@ -1,0 +1,56 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [
+        {
+            "relationshipName": "userinforls",
+            "otherEntityName": "user",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "userInfo"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "phone",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "classLevel",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "school",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "location",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gender",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateofbirth",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "device",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "deviceToken",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20181225065109",
+    "dto": "mapstruct",
+    "searchEngine": false,
+    "service": "serviceImpl",
+    "entityTableName": "user_info",
+    "jpaMetamodelFiltering": true,
+    "pagination": "infinite-scroll"
+}
